@@ -2,9 +2,7 @@ import turtle
 import math
 import random
 
-# ==============================
 # SCREEN SETUP
-# ==============================
 
 screen = turtle.Screen()
 screen.setup(800, 800)
@@ -12,9 +10,7 @@ screen.bgcolor("#050316")
 #screen.title("COSMIC ODYSSEY - OUR SOLAR SYSTEM")
 screen.tracer(0)
 
-# ==============================
 # BACKGROUND STARS
-# ==============================
 
 stars = turtle.Turtle()
 stars.hideturtle()
@@ -31,9 +27,7 @@ for i in range(220):
         random.choice(["white", "#A78BFA", "#70E1FF"])
     )
 
-# ==============================
 # PROJECT TITLE
-# ==============================
 
 title = turtle.Turtle()
 title.hideturtle()
@@ -54,9 +48,7 @@ title.color("#A78BFA")
 title.write("A JOURNEY THROUGH SPACE",
             font=("Arial", 9, "normal"))
 
-# ==============================
 # ORBIT DESIGN
-# ==============================
 
 orbit = turtle.Turtle()
 orbit.hideturtle()
@@ -74,9 +66,7 @@ for r in radii:
     orbit.circle(r)
     orbit.penup()
 
-# ==============================
 # SUN
-# ==============================
 
 sun = turtle.Turtle()
 sun.hideturtle()
@@ -101,10 +91,8 @@ sun.goto(-18, -8)
 sun.color("#713D20")
 sun.write("SUN", font=("Arial", 9, "bold"))
 
-# ==============================
 # PLANET INFORMATION
 # radius, size, color, speed, name
-# ==============================
 
 planets = [
     [55, 8, "#A9A9A9", 4.0, "Mercury"],
@@ -117,9 +105,7 @@ planets = [
     [345, 17, "#4169E1", 0.8, "Neptune"]
 ]
 
-# ==============================
 # PLANET DRAWING TURTLE
-# ==============================
 
 planet_draw = turtle.Turtle()
 planet_draw.hideturtle()
@@ -128,9 +114,7 @@ planet_draw.penup()
 
 angles = [0] * 8
 
-# ==============================
 # ELLIPTICAL SATURN RING
-# ==============================
 
 def draw_saturn_ring(x, y):
 
@@ -156,9 +140,7 @@ def draw_saturn_ring(x, y):
 
     planet_draw.penup()
 
-# ==============================
 # JUPITER SURFACE BANDS
-# ==============================
 
 def draw_jupiter(x, y, size):
 
@@ -185,9 +167,7 @@ def draw_jupiter(x, y, size):
         planet_draw.goto(x + half_width, y + offset)
         planet_draw.penup()
 
-# ==============================
 # EARTH DETAILS
-# ==============================
 
 def draw_earth(x, y, size):
 
@@ -200,9 +180,7 @@ def draw_earth(x, y, size):
     planet_draw.goto(x + 2, y + 4)
     planet_draw.dot(3, "#36C66A")
 
-# ==============================
 # ANIMATION
-# ==============================
 
 def animate():
 
@@ -281,9 +259,7 @@ def animate():
     screen.update()
     screen.ontimer(animate, 50)
 
-# ==============================
 # START ANIMATION
-# ==============================
 
 animate()
 
